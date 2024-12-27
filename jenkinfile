@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven' // Use the name you gave in the Maven configuration
+    }
+    stages {
+        stage('Test Maven') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}
